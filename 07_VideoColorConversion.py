@@ -2,7 +2,7 @@
 import cv2 as cv
 
 #reading video
-cap = cv.VideoCapture('F:\\EDUCATION\Artificial Inteligence\\Artificial Intelligence & Data Science\\04 Computer Vision\\Resources\\vid.mp4')
+cap = cv.VideoCapture('F:\\EDUCATION\\Artificial Inteligence\\Computer Vision\\Resources\\vid.mp4')
 
 #playing video
 while True:
