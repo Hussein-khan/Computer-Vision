@@ -2,11 +2,11 @@
 import cv2 as cv
 
 #reading video
-cap = cv.VideoCapture('F:\\EDUCATION\\Artificial Inteligence\\Computer Vision\\Resources\\vid.mp4')
+cap = cv.VideoCapture('Resources/vid.mp4')
 
 #writing video
-fourcc = cv.VideoWriter_fourcc(*'XVID')
-out = cv.VideoWriter('output.mp4',fourcc,20.0,(640,480))
+fourcc = cv.VideoWriter_fourcc(*'MJPG')
+out = cv.VideoWriter('output.avi',fourcc,30,(640,480),isColor=True)
 #playing video
 while True:
     ret,frame = cap.read()
@@ -15,8 +15,8 @@ while True:
     (thresh,binary) = cv.threshold(frame,127,255,cv.THRESH_BINARY)
     
     if ret == True:
-        print(cap.get(cv.CAP_PROP_FRAME_WIDTH))
-        print(cap.get(cv.CAP_PROP_FRAME_HEIGHT))
+        #print(cap.get(cv.CAP_PROP_FRAME_WIDTH))
+        #print(cap.get(cv.CAP_PROP_FRAME_HEIGHT))
         out.write(frame)
         cv.imshow('webcam',frame)
 
