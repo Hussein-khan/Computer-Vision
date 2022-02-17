@@ -26,6 +26,6 @@ while True:
 
     if cv.waitKey(1) & 0xFF==ord('d'):
         break
-
+#cap
 cap.release()
 cv.destroyAllWindows()
